@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title><?php echo SITE_NAME; ?></title>
+	<?php echo $this->Html->javascript('http://www.google.com/jsapi'); ?>
+	<script type="text/javascript">google.load( "jquery", "1.7.1" );</script>
+	<?php echo $this->Html->javascript('index.js'); ?>
+	<link rel="stylesheet" href="http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css"/>
+	<?php echo $this->Html->css('layout.css'); ?>
+	<?php echo $head; ?>
+</head>
+<body>
+
+<div class="topbar">
+	<div class="fill">
+		<div class="container">
+			<?php echo $this->Html->link(SITE_NAME, array('controller' => DEFAULT_CONTROLLER, 'action' => DEFAULT_ACTION), array('class' => 'brand')); ?>
+			<!--<ul class="nav">
+<li class="active"><a href="/">Home</a></li>
+			</ul>-->
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<div class="content">
+		<div class="row">
+			<div class="span16">
+<?php echo $content_for_layout; ?>
+			</div>
+		</div>
+	</div>
+
+	<footer>
+		<p>Footer</p>
+	</footer>
+</div>
+
+</body>
+</html>
